@@ -27,13 +27,13 @@ const BooksList = (props) => {
   ));
   return (
     <div>
-      <div className="d-flex align-items-center nav">
+      <div className="d-flex align-items-center nav bg-white">
         <strong className="headline h3">Neko Bookstore</strong>
         <span className="p-3 text-opacity-2">BOOKS</span>
         <span className="p-3 text-opacity-1">CATEGORIES</span>
         <CategoryFilter handleFilterChange={handleFilterChange} />
       </div>
-      <div className="jumbotron">
+      <div className="">
         {bookList}
       </div>
     </div>

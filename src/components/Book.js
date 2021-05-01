@@ -2,12 +2,16 @@ import PropTypes from 'prop-types';
 
 const Book = ({ book: { id, title, category }, key, handleRemoveBook }) => (
   <ul className="container bg-white my-5 p-5 border">
-    <li key={key} className="list-unstyled">
-      <td>{title}</td>
-      <td>{category}</td>
-      <td>
-        <button type="button" onClick={() => handleRemoveBook({ id, title, category })}>X</button>
-      </td>
+    <li key={key} className="list-unstyled d-flex flex-column">
+      <span>{title}</span>
+      <strong>{category}</strong>
+      <span className="link">Neko Master</span>
+      <div>
+        <button type="button" className="btn btn-link">Comments</button>
+        <button type="button" className="btn btn-link bordered-sides py-0" onClick={() => handleRemoveBook({ id, title, category })}>Remove</button>
+        <button type="button" className="btn btn-link">Edit</button>
+      </div>
+      <div className="Oval-2" />
     </li>
   </ul>
 );

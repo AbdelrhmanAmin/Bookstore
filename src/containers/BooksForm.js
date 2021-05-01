@@ -39,15 +39,20 @@ const BooksForm = ({ dispatch }) => {
     'Sci-Fi',
   ];
   return (
-    <form>
-      <input type="text" id="title" name="title" onChange={handleChange} />
-      <select id="category" name="category" onClick={handleChange}>
-        {categories.map((category) => (
-          <option key={category} value={category}>{category}</option>
-        ))}
-      </select>
-      <button type="submit" onClick={handleSubmit}>Add</button>
-    </form>
+    <div className="container bg p-0 py-4 border-top ">
+      <h3 className="h3 title">
+        ADD NEW BOOK
+      </h3>
+      <form className="form-inline">
+        <input type="text" className="title-panel" name="title" onChange={handleChange} />
+        <select className="category-panel mx-3" name="category" onClick={handleChange}>
+          {categories.map((category) => (
+            <option key={category} value={category}>{category}</option>
+          ))}
+        </select>
+        <button type="submit" className="btn btn-primary btn-panel" onClick={handleSubmit}>Add</button>
+      </form>
+    </div>
   );
 };
 
