@@ -78,6 +78,9 @@ body {
   letter-spacing: normal;
   color: #4386bf;
 }
+.undecorate:hover {
+  text-decoration: none !important;
+}
 .bordered-sides {
   border-right: 1px solid #e8e8e8;
   border-left: 1px solid #e8e8e8;
@@ -101,4 +104,35 @@ body {
   height: 45px;
   border-radius: 3px;
   background-color: var(--azure);
+}
+.grid-book {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  align-items: center;
+}
+.update-progress {
+  width: 143px;
+  height: 18px;
+  font-family: RobotoSlab;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  border-radius: 3px;
+  background-color: var(--azure);
+  width: 184px;
+  height: 33px;
+}
+.icon-circle {
+  padding: 5px 10px;
+  border-radius: 50%;
+  border: solid 1px #e8e8e8;
+  width: 35px;
+  height: 35px;
+}
+.icon-user {
+  color: var(--azure);
 }

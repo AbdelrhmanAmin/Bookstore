@@ -18,7 +18,7 @@ const BooksForm = ({ dispatch }) => {
     }
     if (e.target.name === 'category') {
       setState({
-        ...state, title: e.target.value,
+        ...state, category: e.target.value,
       });
     }
   };
