@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+  --azure: #0290ff;
+  --black-two: #121212;
+}
+.nav {
+  padding: 0 100px;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.headline {
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--azure);
+}
+.text-opacity-2 {
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: var(--black-two);
+}
+.text-opacity-1 {
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: var(--black-two);
+}

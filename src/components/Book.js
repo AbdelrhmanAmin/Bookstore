@@ -1,14 +1,15 @@
 import PropTypes from 'prop-types';
 
 const Book = ({ book: { id, title, category }, key, handleRemoveBook }) => (
-  <tr key={key}>
-    <td>{id}</td>
-    <td>{title}</td>
-    <td>{category}</td>
-    <td>
-      <button type="button" onClick={() => handleRemoveBook({ id, title, category })}>X</button>
-    </td>
-  </tr>
+  <ul className="container bg-white my-5 p-5 border">
+    <li key={key} className="list-unstyled">
+      <td>{title}</td>
+      <td>{category}</td>
+      <td>
+        <button type="button" onClick={() => handleRemoveBook({ id, title, category })}>X</button>
+      </td>
+    </li>
+  </ul>
 );
 Book.propTypes = {
   book: PropTypes.exact({

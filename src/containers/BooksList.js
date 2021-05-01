@@ -27,18 +27,15 @@ const BooksList = (props) => {
   ));
   return (
     <div>
-      <CategoryFilter handleFilterChange={handleFilterChange} />
-      <table>
-        <thead>
-          <tr>
-            <th>Book ID</th>
-            <th>Title</th>
-            <th>Category</th>
-          </tr>
-        </thead>
+      <div className="d-flex align-items-center nav">
+        <strong className="headline h3">Neko Bookstore</strong>
+        <span className="p-3 text-opacity-2">BOOKS</span>
+        <span className="p-3 text-opacity-1">CATEGORIES</span>
+        <CategoryFilter handleFilterChange={handleFilterChange} />
+      </div>
+      <div className="jumbotron">
         {bookList}
-        <tbody />
-      </table>
+      </div>
     </div>
   );
 };
