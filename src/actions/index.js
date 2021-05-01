@@ -8,7 +8,7 @@ export const removeBook = (book) => ({
   book,
 });
 
-export const filter = (category) => ({
+export const filterBook = (category) => ({
   type: 'CHANGE_FILTER',
   category,
 });

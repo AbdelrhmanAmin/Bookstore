@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
-import { removeBook, filter } from '../actions/index';
+import { removeBook, filterBook } from '../actions/index';
 import CategoryFilter from '../components/CategoryFilter';
 
 const BooksList = (props) => {
@@ -62,7 +62,7 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch(removeBook(book));
   },
   filterBook: (category) => {
-    dispatch(filter(category));
+    dispatch(filterBook(category));
   },
 });
 
