@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { createBook } from '../actions/index';
 
-const BooksForm = ({ dispatch }) => {
+const BooksForm = ({ addBook }) => {
   const [state, setState] = useState({
     id: Date.now(),
     title: '',
@@ -18,7 +18,7 @@ const BooksForm = ({ dispatch }) => {
     }
     if (e.target.name === 'category') {
       setState({
-        ...state, title: e.target.value,
+        ...state, category: e.target.value,
       });
     }
   };
@@ -27,7 +27,7 @@ const BooksForm = ({ dispatch }) => {
     setState({
       ...state, id: Date.now(),
     });
-    dispatch(createBook(state));
+    addBook(state);
   };
   const categories = [
     'Action',
@@ -41,7 +41,7 @@ const BooksForm = ({ dispatch }) => {
   return (
     <form>
       <input type="text" id="title" name="title" onChange={handleChange} />
-      <select id="category" name="category" onClick={handleChange}>
+      <select id="category" onChange={handleChange} name="category">
         {categories.map((category) => (
           <option key={category} value={category}>{category}</option>
         ))}
@@ -50,5 +50,10 @@ const BooksForm = ({ dispatch }) => {
     </form>
   );
 };
+const mapDispatchToProps = (dispatch) => ({
+  addBook: (book) => {
+    dispatch(createBook(book));
+  },
+});
 
-export default connect()(BooksForm);
+export default connect(null, mapDispatchToProps)(BooksForm);
