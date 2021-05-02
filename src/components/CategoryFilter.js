@@ -1,6 +1,4 @@
-/* eslint-disable react/prop-types */
-// import PropTypes from 'prop-types';
-// import { useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 const CategoryFilter = (props) => {
@@ -36,9 +34,9 @@ const CategoryFilter = (props) => {
   );
 };
 
-// CategoryFilter.propTypes = {
-//   handleFilterChange: PropTypes.func.isRequired,
-// };
+CategoryFilter.propTypes = {
+  handleFilterChange: PropTypes.func.isRequired,
+};
 
 const mapStateToProps = (state) => ({
   filter: state.filter,
