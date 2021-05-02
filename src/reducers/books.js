@@ -6,8 +6,8 @@ const booksReducer = (state = [], action) => {
     return result;
   }
   if (action.type === REMOVE) {
-    const filteredBooks = state.books.filter((book) => book.id !== action.book.id);
-    return { ...state, books: filteredBooks };
+    const filteredBooks = state.filter((book) => book.id !== action.book.id);
+    return filteredBooks;
   }
 
   return state;
