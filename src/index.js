@@ -9,21 +9,22 @@ import './index.css';
 const initalState = {
   books: [
     {
-      id: Math.random(),
+      id: Math.round(Math.random() * 10),
       title: 'Dune',
-      category: 'Science Fiction',
+      category: 'Sci-Fi',
     },
     {
-      id: Math.random(),
+      id: Math.round(Math.random() * 10),
       title: 'New Earth',
-      category: 'Spirituality',
+      category: 'Learning',
     },
     {
-      id: Math.random(),
+      id: Math.round(Math.random() * 10),
       title: 'The Power Of Now',
-      category: 'Spirituality',
+      category: 'Learning',
     },
   ],
+  filter: '',
 };
 const store = createStore(rootReducer, initalState);
 
