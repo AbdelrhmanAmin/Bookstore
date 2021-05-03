@@ -1,4 +1,6 @@
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCat } from '@fortawesome/free-solid-svg-icons';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
 import { removeBook, filterBook } from '../actions/index';
@@ -27,18 +29,23 @@ const BooksList = (props) => {
   ));
   return (
     <div>
-      <CategoryFilter handleFilterChange={handleFilterChange} />
-      <table>
-        <thead>
-          <tr>
-            <th>Book ID</th>
-            <th>Title</th>
-            <th>Category</th>
-          </tr>
-        </thead>
+      <div className="d-flex align-items-center justify-content-between nav bg-white py-3">
+        <div className="d-flex align-items-center">
+          <strong className="headline h3">
+            <span role="img" aria-label="img">🐱</span>
+            Neko Bookstore
+          </strong>
+          <span className="px-5 text-opacity-2">BOOKS</span>
+          <span className=" pr-1 text-opacity-1">CATEGORIES:</span>
+          <CategoryFilter handleFilterChange={handleFilterChange} />
+        </div>
+        <div className="icon-circle">
+          <FontAwesomeIcon icon={faCat} className="icon-user" size="1x" />
+        </div>
+      </div>
+      <div className="">
         {bookList}
-        <tbody />
-      </table>
+      </div>
     </div>
   );
 };

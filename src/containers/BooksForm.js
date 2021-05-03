@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { createBook } from '../actions/index';
 
-const BooksForm = ({ addBook }) => {
+const BooksForm = ({ dispatch }) => {
   const [state, setState] = useState({
     id: Date.now(),
     title: '',
@@ -27,7 +27,7 @@ const BooksForm = ({ addBook }) => {
     setState({
       ...state, id: Date.now(),
     });
-    addBook(state);
+    dispatch(createBook(state));
   };
   const categories = [
     'Action',
@@ -39,21 +39,21 @@ const BooksForm = ({ addBook }) => {
     'Sci-Fi',
   ];
   return (
-    <form>
-      <input type="text" id="title" name="title" onChange={handleChange} />
-      <select id="category" onChange={handleChange} name="category">
-        {categories.map((category) => (
-          <option key={category} value={category}>{category}</option>
-        ))}
-      </select>
-      <button type="submit" onClick={handleSubmit}>Add</button>
-    </form>
+    <div className="container bg p-0 py-4 border-top ">
+      <h3 className="h3 title">
+        ADD NEW BOOK
+      </h3>
+      <form className="form-inline">
+        <input type="text" className="title-panel" name="title" onChange={handleChange} />
+        <select className="category-panel mx-3" name="category" onClick={handleChange}>
+          {categories.map((category) => (
+            <option key={category} value={category}>{category}</option>
+          ))}
+        </select>
+        <button type="submit" className="btn btn-primary btn-panel" onClick={handleSubmit}>Add</button>
+      </form>
+    </div>
   );
 };
-const mapDispatchToProps = (dispatch) => ({
-  addBook: (book) => {
-    dispatch(createBook(book));
-  },
-});
 
-export default connect(null, mapDispatchToProps)(BooksForm);
+export default connect()(BooksForm);

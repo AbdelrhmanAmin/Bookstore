@@ -15,6 +15,7 @@ A Bookstore Project Built With React & Redux
 
 ## Live Demo
 
+![Bookstore Screenshot](./img.png)
 [Live Demo Link](https://reactbookstoreredux.herokuapp.com)
 
 ## Getting Started

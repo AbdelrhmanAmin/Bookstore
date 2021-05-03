@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+:root {
+  --blue: #1e90ff;
+  --white: #fff;
+  --azure: #0290ff;
+  --black-two: #121212;
+  --bg: #fafafa !important;
+  --warm-grey: #888;
+}
+
+.nav {
+  padding: 0 100px;
+}
+
+.bg {
+  background-color: var(--bg);
+}
+
+body {
+  background-color: var(--bg);
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.headline {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--azure);
+}
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: var(--warm-grey);
+}
+
+.text-opacity-2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: var(--black-two);
+}
+
+.text-opacity-1 {
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: var(--black-two);
+}
+
+.Oval-2 {
+  width: 68px;
+  height: 68px;
+  border: 5px solid #307bbe;
+  border-radius: 50%;
+}
+
+.link {
+  font-family: 'Roboto Slab', serif;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.undecorate:hover {
+  text-decoration: none !important;
+}
+
+.bordered-sides {
+  border-right: 1px solid #e8e8e8;
+  border-left: 1px solid #e8e8e8;
+}
+
+.title-panel {
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: var(--white);
+  width: 664px;
+  height: 45px;
+}
+
+.category-panel {
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: var(--white);
+  width: 260px;
+  height: 45px;
+}
+
+.btn-panel {
+  width: 184px;
+  height: 45px;
+  border-radius: 3px;
+  background-color: var(--azure);
+}
+
+.grid-book {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  align-items: center;
+}
+
+.update-progress {
+  font-family: 'Roboto Slab', serif;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  border-radius: 3px;
+  background-color: var(--azure);
+  width: 184px;
+  height: 33px;
+}
+
+.icon-circle {
+  padding: 5px 8px;
+  border-radius: 50%;
+  border: solid 1px #e8e8e8;
+  width: 35px;
+  height: 35px;
+}
+
+.icon-user {
+  color: var(--azure);
+}
